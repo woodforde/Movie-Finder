@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <script src="https://kit.fontawesome.com/20e48b77b4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <section id="landing-page">
+        
+        <div class="landing__page--container">
+            <div class="landing__page--background">
+                <!-- <div class="landing__page--background-overlay"></div> -->
+                <img class="landing__page--background-img" src="https://cdn.shopify.com/s/files/1/0591/4882/8877/files/curtain-269920_54e49847-dbc2-42cb-9982-7568d72534bd_1280x@2x.jpg?v=1629866798" alt="">
+            </div>
+            <nav>
+                <div class="nav__logo">movieFindr</div>
+                <ul class="nav__link--list">
+                    <li class="nav__link">
+                        <a href="" class="
+                            nav__link--anchor
+                            link__hover-effect
+                            link__hover-effect--white
+                        ">Home</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="" class="
+                            nav__link--anchor
+                            link__hover-effect
+                            link__hover-effect--white
+                        ">Find a movie</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="" class="
+                            nav__link--anchor
+                            nav__link--primary
+                        ">CONTACT</a>
+                    </li>
+                </ul>
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="menu--container">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__link--list">
+                        <li class="menu__link">
+                            <a href="" class="
+                                menu__link--anchor
+                                link__hover-effect
+                                link__hover-effect--black
+                            ">Home</a>
+                        </li>
+                        <li class="menu__link">
+                            <a href="" class="
+                                menu__link--anchor
+                                link__hover-effect
+                                link__hover-effect--black
+                            ">Find a movie</a>
+                        </li>
+                        <li class="menu__link">
+                            <a href="" class="
+                                menu__link--anchor
+                                menu__link--primary
+                            ">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <header>
+                <h1 class="search__bar--title">Browse movies</h1>
+                <div class="search__bar--wrapper">
+                    <input class="search__bar" type="text" placeholder="Search by Movie Title"></input>
+                    <button class="search__bar--img" onclick="searchMovies()">
+                        <i class="fas fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </header>
+        </div>
+
+    </section>
+
+    <main>
+        <section id="search">
+            <div class="container">
+                <div class="row">
+                    <div class="search--header">
+                        <h2 class="search--title">Search results for: <span class="search--input-display"></span></h2>
+                        <div class="search__scale">
+                            <h4 class="rating__range">Rating range: <span class="rating__slider--min-value"></span> : <span class="rating__slider--max-value"></span></h4>
+                            <div class="rating__slider--container">
+                                <div class="rating__slider--track"></div>
+                                <input type="range" min=0 max=100 value=0 class="rating__slider rating__slider-1">
+                                <input type="range" min=0 max=100 value=100 class="rating__slider rating__slider-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <div class="movies__no-result">
+                            <img class="movies__no-result--img" src="./assets/undraw_not_found_re_44w9.svg" alt="">
+                            <!-- <i class="fas fa-ban movies__no-result--icon"></i> -->
+                            <h2 class="search--title">Could not find any matches related to your search</h2>
+                            <p class="movies__no-result--para">Please change your search input or rating range</p>
+                        </div>
+                        <!-- <i class="fas fa-spinner movies__loading--spinner"></i> -->
+                        <!-- movie -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
