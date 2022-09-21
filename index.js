@@ -61,8 +61,6 @@ async function loadMovies(filter) {
     const movieSearch = await fetch(`https://www.omdbapi.com/?s=${filter}&type=movie&apikey=dba29d20`);
     const movieSearchData = await movieSearch.json();
 
-    console.log(movieSearchData)
-
     if (movieSearchData.Response === "False") {
         renderNoResult();
     } else {
@@ -72,7 +70,7 @@ async function loadMovies(filter) {
     movieListEl.classList.remove('movies__loading');
 }
 
-function renderNoResult() {
+async function renderNoResult() {
     movieListEl.innerHTML = `
         <div class="movies__no-result">
             <img class="movies__no-result--img" src="./assets/undraw_not_found_re_44w9.svg" alt="">
@@ -104,7 +102,6 @@ async function renderMovies(movieSearchData) {
     } else {
         movieListEl.innerHTML = movieInfoSorted.map(movie => movieHTML(movie)).join("");
     }
-
 }
 
 function movieHTML(movie) {
